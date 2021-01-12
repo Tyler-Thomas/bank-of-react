@@ -18,13 +18,14 @@ componentDidMount(){
  console.log(response);
  
  this.setState({ debits: response });
- this.state.debits.map((Entry)=> {console.log(Entry["Amount"]);this.updateSum(Entry["amount"])});
+ this.state.debits.map((Entry)=> 
+ {console.log(Entry["amount"]);this.updateSum(Entry["amount"])});
  })
  .catch((error) => console.error(error));
  }
 
 updateSum=(num)=>{
-console.log(num);
+console.log(this.state.balance+num);
 this.setState({balance:(this.state.balance)+num});
 }
 

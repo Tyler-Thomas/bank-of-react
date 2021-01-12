@@ -9,9 +9,10 @@ accountBalance:this.props.accountBalance,
 }
 }
   render() {
+  console.log(this.props.accountBalance)
     return (
         <div>
-          Balance: {this.state.accountBalance}
+          Balance: {this.props.accountBalance}
         </div>
     );
   }
